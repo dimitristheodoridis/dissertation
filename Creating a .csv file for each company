@@ -1,0 +1,4 @@
+library(data.table)
+company_skillset<-fread("company_skills.csv",select = grep("^skill", names(fread("company_skills.csv", nrow= 0L))))
+View(company)
+write.csv(company_skillset, file="company_skillset.csv")
