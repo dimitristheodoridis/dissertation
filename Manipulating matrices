@@ -1,0 +1,65 @@
+setwd("C:/Users/Username/Downloads")
+df<-read.csv("C:/Users/Username/Downloads/final_dataset.csv", header=TRUE)
+data.matrix(data.frame(x = "df", stringsAsFactors = FALSE))
+data.matrix(df)
+View(df)
+data.matrix(df[3:3563])
+matrix<-data.matrix(df[3:3563])
+View(matrix)
+colSums(matrix)
+df2<-matrix[,colSums(matrix) > 30]
+View(df2)
+df2[1020,(1:163)] <- colSums(df2[,1:163])
+data.frame(df2)
+View(df2)
+df2[1020,(1:163)] <- colSums(df2[,1:163])
+write.table(df2,file="matrix.csv",sep="\t", col.names = TRUE, row.names = TRUE)
+df3<-read.csv("C:/Users/Username/Downloads/matrix.csv", header = TRUE)
+View(df3)
+df3<-data.frame(df2)
+View(df3)
+df3[1020,(1:163)] <- colSums(df3[,1:163])
+View(df3)
+write.csv(df3,file="final_dataset_over_30.csv")
+df3$C <- paste(df$C,df$C..1,df$C..)
+df3$C <- paste(df3$C,df3$C..1,df3$C..)
+View(df3)
+df3<-data.frame(df2)
+df3[1020,(1:163)] <- colSums(df3[,1:163])
+View(df3)
+df3[,19]<- df3[,19]+df3[,20]+df3[,21]
+View(df3)
+df3$20<-NULL
+df3$20<- NULL
+df3<- df3[-c(20,21)]
+View(df3)
+df3[,42]<- df3[,42]+df3[,43]+df3[,44]
+View(df3)
+df3<- df3[-c(43,44)]
+View(df3)
+df3[,48]<- df3[,48]+df3[,49]+df3[,50]+df3[,51]+df3[,52]+df3[,53]+df3[,54]+df3[,55]+df3[,56]
+df3<- df3[-c(49:56)]
+View(df3)
+df3[,48]<- df3[,48]+df3[,49]+df3[,50]+df3[,51]
+df3<- df3[-c(49:51)]
+View(df3)
+write.csv(df3,file="final_dataset_over_30_b.csv")
+df3[,140]<- df3[,140]+df3[,62]+df3[,66]+df3[,77]+df3[,79]+df3[,148]
+df4<- df3[-c(62,66,77,79,148)]
+write.csv(df4,file="final_dataset_over_30_c.csv")
+View(df4)
+View(df3)
+View(df3)
+df5<-read.csv("C:/Users/Username/Downloads/final_dataset_over_30_b.csv", header = TRUE)
+View(df5)
+df5[,114]<- df5[,114]+df5[,62]+df5[,66]+df5[,77]+df5[,79]+df5[,122]
+df4<- df5[-c(62,66,77,79,122)]
+write.csv(df4,file="final_dataset_over_30_c.csv")
+View(df4)
+View(df)
+df6<- merge(df$url,df4)
+View(df6)
+df6<rbind(df)
+df6<- merge(df$url&df$company,df4)
+df6<- merge(df$url,df$company,df4)
+df6<- merge(df$company,df6)
