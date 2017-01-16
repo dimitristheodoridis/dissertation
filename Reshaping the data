@@ -1,0 +1,4 @@
+library(reshape2)
+df <- read.csv("C:/Users/Username/Desktop/all_data.csv", header=TRUE)
+df2 <- dcast(melt(df, 1:2, na.rm = TRUE), company + url ~ value, length)
+write.csv(df2,file='C:/Users/Username/Desktop/final_dataset.csv', row.names=FALSE)
